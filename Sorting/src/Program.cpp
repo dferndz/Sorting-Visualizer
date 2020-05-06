@@ -106,7 +106,7 @@ int main(int argc, char* argv[]) {
 	SDL_Window* window = SDL_CreateWindow("Sorting Algorithms By Daniel Fernandez", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, W, H, SDL_WINDOW_SHOWN);
 	SDL_Event event;
 	SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, 0);
-	TTF_Font* Sans = TTF_OpenFont("C:/Users/danie/source/repos/Sorting/Sorting/vendor/ttf/lib/x64/Sans.ttf", 24);
+	TTF_Font* Sans = TTF_OpenFont("Sans.ttf", 24);
 
 	SDL_Color White = { 255, 255, 255 };
 
