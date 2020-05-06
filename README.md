@@ -1,7 +1,12 @@
 # Sorting
-Visual sorting algorithms
-<hr>
+Visual sorting algorithms<br>
 
+This is an educational software that graphically shows how several sorting algorithms work. <br>
+You can add your own sorting algorithms following the instructions Adding custom sorting algorithm section.
+
+<img src="https://github.com/dferndz/Sorting/blob/master/Screenshot.png?raw=true">
+
+<hr>
 <h3>Adding custom sorting algorithm:</h3>
 <pre>
 
