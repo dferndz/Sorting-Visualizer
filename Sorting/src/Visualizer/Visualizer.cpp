@@ -110,11 +110,6 @@ void Visualizer::Init() {
 		v._window.pollEvents();
 	}
 
-	if(surfaceMessage)
-		SDL_FreeSurface(surfaceMessage);
-
-	if(Message)
-		SDL_DestroyTexture(Message);
 
 	TTF_Quit();
 
