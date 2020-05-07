@@ -1,4 +1,4 @@
-<h3>v0.1-alpha</h3><hr>
+<h3>Releases</h3><hr>
 This is a pre-release version. This software is intended for educational purposes.
 <br><br>
 
