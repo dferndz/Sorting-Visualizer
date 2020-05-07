@@ -4,9 +4,9 @@ Visual sorting algorithms<br>
 This is an educational software that graphically shows how several sorting algorithms work. <br>
 You can add your own sorting algorithms following the instructions Adding custom sorting algorithm section.<br>
 
-<a href="https://dferndz.github.io/Sorting/Releases.html">Downloads</a>
+<a href="https://dferndz.github.io/Sorting-Visualizer/Releases.html">Downloads</a>
 
-<img src="https://github.com/dferndz/Sorting/blob/master/Screenshot.png?raw=true"><br><br>
+<img src="https://github.com/dferndz/Sorting-Visualizer/blob/master/Screenshot.png?raw=true"><br><br>
 
 <hr>
 <h3>Adding custom sorting algorithm:</h3>
