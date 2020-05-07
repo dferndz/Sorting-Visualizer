@@ -82,6 +82,8 @@ void Visualizer::Init() {
 		}
 
 		SDL_RenderCopy(v._window.getRenderer(), Message, NULL, &Message_rect);
+		SDL_FreeSurface(surfaceMessage);
+		SDL_DestroyTexture(Message);
 		v.DrawBars();
 
 		if (v.sorted) {
@@ -108,8 +110,12 @@ void Visualizer::Init() {
 		v._window.pollEvents();
 	}
 
-	SDL_FreeSurface(surfaceMessage);
-	SDL_DestroyTexture(Message);
+	if(surfaceMessage)
+		SDL_FreeSurface(surfaceMessage);
+
+	if(Message)
+		SDL_DestroyTexture(Message);
+
 	TTF_Quit();
 
 	if (t1.joinable())
@@ -118,15 +124,14 @@ void Visualizer::Init() {
 }
 
 void Visualizer::DrawBars() {
-	SDL_Rect rect;
 
-	rect.w = parameters.bar_w;
+	_rect.w = parameters.bar_w;
 
 
 	for (int i = 0; i < _arr.size(); i++) {
-		rect.x = i * parameters.bar_w;
-		rect.y = _window.getH() - (_arr[i] * parameters.bar_h_scale);
-		rect.h = _arr[i] * parameters.bar_h_scale;
+		_rect.x = i * parameters.bar_w;
+		_rect.y = _window.getH() - (_arr[i] * parameters.bar_h_scale);
+		_rect.h = _arr[i] * parameters.bar_h_scale;
 
 		if (i == green)
 			SDL_SetRenderDrawColor(_window.getRenderer(), 0, 255, 0, 1);
@@ -134,7 +139,7 @@ void Visualizer::DrawBars() {
 			SDL_SetRenderDrawColor(_window.getRenderer(), 255, 0, 0, 1);
 		else
 			SDL_SetRenderDrawColor(_window.getRenderer(), 255, 255, 255, 1);
-		SDL_RenderFillRect(_window.getRenderer(), &rect);
+		SDL_RenderFillRect(_window.getRenderer(), &_rect);
 	}
 }
 

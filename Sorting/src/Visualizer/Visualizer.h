@@ -41,7 +41,7 @@ private:
 	std::vector<int> _arr;
 	Window _window;
 	Algorithms _algorithms;
-
+	SDL_Rect _rect;
 	
 };
 
