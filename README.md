@@ -9,17 +9,43 @@ You can add your own sorting algorithms following the instructions Adding custom
 <img src="https://github.com/dferndz/Sorting/blob/master/Screenshot.png?raw=true"><br><br>
 
 <hr>
+<h3>Dependencies</h3>
+
+-SDL2.0<br>
+-SDL_ttf<br>
+
+<hr>
 <h3>Adding custom sorting algorithm:</h3>
-<pre>
 
 Write the sorting function in Program.cpp
 The function data type MUST be void, and MUST take one and ONLY ONE parameter of type std::vector&lt;int&gt;*.
 
+Your sorting function MUST set the flag Visualizer::getSorted() = true; before exiting. This flag tells the Visualizer the sorting is finished, so that it can go to the next sorting function.<br><br>
 
-Add delay using std::this_thread::sleep_for(std::chrono::milliseconds(DELAY)); for every comparisson.
-Add final delay using std::this_thread::sleep_for(std::chrono::milliseconds(DELAY_2)); before exiting the function.
+<strong>In the function body, use the following flags to interact with the visualizer:</strong><br><br>
 
-Set green = [index_number]; to highlight a bar
-Set red = [index_number]; to highlight a bar
-
+<pre>
+Visualizer::getGreen() = [some integer]; //[some integer] index in the array will be rendered green<br>
+Visualizer::getRed() = [some integer];   //[some integer] index in the array will be rendered red<br>
+Visualizer::getItr()++; //this increases the comparisson count in the visualizer<br>
+Visualizer::sleep(); //sleep used every time the function does a comparisson<br>
+Visualizer::sleep_final(); //sleep used at the end of the function, to allow the user to visualize the sorted data<br><br>
 </pre>
+
+<strong>To add your sorting algorithm to the visualizer:</strong><br><br>
+Use: Visualizer::AddAlgorithm(functionName, "Algorithm Name", parameters);<br><br>
+
+This is an example:
+<pre>
+Visualizer::AddAlgorithm(quickSort, "Quick Sort", PARAMETERS(
+		5,		//bar width
+		10,		//bar height scale
+		160,	//number of elements in array
+		50,		//max number generated for the array
+		3,		//delay
+		2000	//final delay
+	));
+  </pre>
+  Or use Visualizer::GetParameters(); to get the default parameters.<br><br>
+  Finally, call Visualizer::Init(); to start the visualization.
+  

@@ -150,7 +150,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Visualizer\Algorithms.cpp" />
     <ClCompile Include="src\Program.cpp" />
+    <ClCompile Include="src\Visualizer\contrib.cpp" />
+    <ClCompile Include="src\Visualizer\Window.cpp" />
+    <ClCompile Include="src\Visualizer\Visualizer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Visualizer\Algorithms.h" />
+    <ClInclude Include="src\Visualizer\contrib.h" />
+    <ClInclude Include="src\Visualizer\Eventhandler.h" />
+    <ClInclude Include="src\Visualizer\Window.h" />
+    <ClInclude Include="src\Visualizer\Visualizer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
