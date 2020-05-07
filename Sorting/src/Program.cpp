@@ -20,8 +20,6 @@ void SelectionSort(std::vector<int>* nums) {
 		(*nums)[i] = (*nums)[selected];
 		(*nums)[selected] = temp;
 
-
-
 		Visualizer::sleep();
 
 	}
