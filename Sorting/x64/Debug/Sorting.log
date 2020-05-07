@@ -1,4 +1,3 @@
-﻿  Program.cpp
-C:\Users\danie\source\repos\Sorting\Sorting\src\Program.cpp(90,37): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\danie\source\repos\Sorting\Sorting\src\Program.cpp(274,17): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+﻿  Visualizer.cpp
+C:\Users\danie\source\repos\Sorting\Sorting\src\Visualizer\Visualizer.cpp(143,17): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Sorting.vcxproj -> C:\Users\danie\source\repos\Sorting\x64\Debug\Sorting.exe
