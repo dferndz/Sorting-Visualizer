@@ -1,3 +1,0 @@
-﻿  Visualizer.cpp
-C:\Users\danie\source\repos\Sorting\Sorting\src\Visualizer\Visualizer.cpp(143,17): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Sorting.vcxproj -> C:\Users\danie\source\repos\Sorting\x64\Debug\Sorting.exe

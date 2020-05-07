@@ -1,4 +1,3 @@
-#include <iostream>
 #include "Visualizer/Visualizer.h"
 
 
@@ -19,8 +18,6 @@ void SelectionSort(std::vector<int>* nums) {
 		int temp = (*nums)[i];
 		(*nums)[i] = (*nums)[selected];
 		(*nums)[selected] = temp;
-
-
 
 		Visualizer::sleep();
 
