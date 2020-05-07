@@ -47,5 +47,6 @@ Visualizer::AddAlgorithm(quickSort, "Quick Sort", PARAMETERS(
 	));
   </pre>
   Or use Visualizer::GetParameters(); to get the default parameters.<br><br>
-  Finally, call Visualizer::Init(); to start the visualization.
+  Finally, call Visualizer::Init(); to start the visualization. <br><br>
+  Go to Sorting/src/Program.cpp to see a functional example.
   
