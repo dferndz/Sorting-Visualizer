@@ -29,10 +29,11 @@ void SelectionSort(std::vector<int>* nums) {
 void BubbleSort(std::vector<int>* nums) {
 
 	bool swap = true;
+	int c = 0;
 
 	while (swap) {
 		swap = false;
-		for (int i = 0; i < nums->size() - 1; i++) {
+		for (int i = 0; i < nums->size() - c - 1; i++) {
 			Visualizer::getItr()++;
 			Visualizer::getGreen() = i;
 			Visualizer::getRed() = i + 1;
@@ -44,6 +45,7 @@ void BubbleSort(std::vector<int>* nums) {
 			}
 			Visualizer::sleep();
 		}
+		c++;
 	}
 
 	Visualizer::getSorted() = true;
@@ -99,13 +101,32 @@ void quickSort(std::vector<int>* arr)
 
 
 int main(int argc, char* argv[]) {
-	Visualizer::AddAlgorithm(SelectionSort, "Selection Sort", Visualizer::GetParameters());
-	Visualizer::AddAlgorithm(BubbleSort, "Bubble Sort", Visualizer::GetParameters());
-	Visualizer::AddAlgorithm(quickSort, "Quick Sort", PARAMETERS(
+
+	Visualizer::AddAlgorithm(BubbleSort, "Bubble Sort", PARAMETERS(
 		5,		//bar width
-		10,		//bar height scale
+		1,		//bar height scale
 		160,	//number of elements in array
-		50,		//max number generated for the array
+		500,		//max number generated for the array
+		1,		//delay
+		2000	//final delay
+	));
+
+	Visualizer::AddAlgorithm(SelectionSort, "Selection Sort", PARAMETERS(
+		4,		//bar width
+		1,		//bar height scale
+		200,	//number of elements in array
+		500,		//max number generated for the array
+		1,		//delay
+		2000	//final delay
+	));
+
+	
+
+	Visualizer::AddAlgorithm(quickSort, "Quick Sort", PARAMETERS(
+		2,		//bar width
+		1,		//bar height scale
+		400,	//number of elements in array
+		500,		//max number generated for the array
 		3,		//delay
 		2000	//final delay
 	));
