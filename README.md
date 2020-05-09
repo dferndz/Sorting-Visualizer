@@ -1,5 +1,5 @@
 # Sorting
-Visual sorting algorithms<br>
+Sorting Visualizer (C++)<br>
 
 This is an educational software that graphically shows how several sorting algorithms work. <br>
 You can add your own sorting algorithms following the instructions Adding custom sorting algorithm section.<br>
